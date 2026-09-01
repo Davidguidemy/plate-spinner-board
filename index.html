@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plate Spinner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate">
+      <form id="gate-form">
+        <h2>Plate Spinner</h2>
+        <p>Enter the board token.</p>
+        <input name="token" type="password" required autocomplete="current-password" />
+        <button type="submit">Open board</button>
+      </form>
+    </div>
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <h1>Plate Spinner</h1>
+          <p>What is spinning. What needs you.</p>
+        </div>
+      </div>
+      <nav class="filters" aria-label="Source">
+        <button class="filter is-on" data-source="">All</button>
+        <button class="filter" data-source="cursor">Cursor</button>
+        <button class="filter" data-source="codex">Codex</button>
+        <button class="filter" data-source="grok">Grok</button>
+      </nav>
+      <div class="counts" id="counts"></div>
+      <button class="ghost" id="add-btn" type="button">Add plate</button>
+    </header>
+    <main class="board" id="board">
+      <section class="col" data-col="running"><h2>Spinning</h2><div class="cards"></div></section>
+      <section class="col" data-col="stale"><h2>Stale</h2><div class="cards"></div></section>
+      <section class="col" data-col="needs_you"><h2>Needs you</h2><div class="cards"></div></section>
+      <section class="col" data-col="done"><h2>Done</h2><div class="cards"></div></section>
+    </main>
+    <aside class="drawer" id="drawer" hidden>
+      <button class="close" id="drawer-close" type="button" aria-label="Close">×</button>
+      <p class="kicker" id="d-kicker"></p>
+      <h2 id="d-name"></h2>
+      <p class="task" id="d-task"></p>
+      <p class="outcome" id="d-outcome"></p>
+      <label class="turn-label" for="turn-select">Turns</label>
+      <select id="turn-select"></select>
+      <article class="turn-view" id="turn-view"></article>
+      <div class="actions" id="d-actions"></div>
+    </aside>
+    <dialog id="add-dialog">
+      <form method="dialog" id="add-form">
+        <h2>Spin up a plate</h2>
+        <label>Source
+          <select name="source" required>
+            <option value="cursor">Cursor</option>
+            <option value="codex">Codex</option>
+            <option value="grok">Grok</option>
+          </select>
+        </label>
+        <label>Chat name <input name="chat_name" required /></label>
+        <label>Task <input name="task" required /></label>
+        <label>Intended outcome <input name="intended_outcome" required /></label>
+        <label>Locator <span class="opt">optional</span> <input name="locator" /></label>
+        <menu>
+          <button value="cancel" type="submit">Cancel</button>
+          <button id="add-save" value="default" type="submit">Add</button>
+        </menu>
+      </form>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
