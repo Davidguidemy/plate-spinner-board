@@ -1,5 +1,7 @@
-# Plate Spinner board
+# Plate Spinner board — retired
 
-Public HTML for the operator board. The token is not stored here. Open [index.html](index.html) and paste the token, or use the redirect from the hosted function.
+Attention Control / Plate Spinner was retired on 10 September 2026. The current entry page is a static retirement notice. It contains no access-token form, dashboard script or service calls.
 
-Source of truth for the app lives in the private `plate-spinner` repo.
+Historical assets remain in Git history. Archiving this repository does not remove cached copies served by external CDNs; the retired backend and revoked product credential prevent those copies from operating.
+
+Business commitments and reviews remain in their original work systems. This repository is retained for history, not deployment.
