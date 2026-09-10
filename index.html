@@ -1,106 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Attention Control</title>
-    <link rel="stylesheet" href="./styles.css?v=fdd3a92" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Attention Control — retired</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { max-width: 38rem; margin: 12vh auto; padding: 1.5rem; line-height: 1.6; }
+      h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); line-height: 1.2; }
+    </style>
   </head>
-  <body><section class="gate" id="gate"><form id="gate-form"><h1>Attention Control</h1><p>This board is private.</p><label>Access token <input name="token" type="password" autocomplete="current-password" required></label><button type="submit">Open board</button></form></section>
-    <header class="top">
-      <div class="brand">
-        <span class="mark" aria-hidden="true"></span>
-        <div>
-          <h1>Attention Control</h1>
-          <p>What needs you. What can be left alone. What risks disappearing.</p>
-        </div>
-      </div>
-      <nav class="filters" aria-label="Source">
-        <button class="filter is-on" data-source="">All</button>
-        <button class="filter" data-source="cursor">Cursor</button>
-        <button class="filter" data-source="codex">Codex</button>
-        <button class="filter" data-source="grok">Grok</button>
-        <button class="filter" data-source="chatgpt">ChatGPT</button>
-        <button class="filter" data-source="linear">Linear</button>
-      </nav>
-      <div class="counts" id="counts"></div>
-      <button class="ghost" id="add-btn" type="button">Add item</button>
-    </header>
-
-    <p id="board-error" class="error" role="alert"></p>
-    <main class="board" id="board">
-      <section class="col" data-col="now">
-        <h2>Needs me now</h2>
-        <div class="cards"></div>
-      </section>
-      <section class="col" data-col="review">
-        <h2>Review completed work</h2>
-        <div class="cards"></div>
-      </section>
-      <section class="col" data-col="working">
-        <h2>Working without me</h2>
-        <div class="cards"></div>
-      </section>
-      <section class="col" data-col="waiting">
-        <h2>Waiting / coming back</h2>
-        <div class="cards"></div>
-      </section>
-      <section class="col" data-col="risk">
-        <h2>At risk / gone quiet</h2>
-        <div class="cards"></div>
-      </section>
-      <section class="col" data-col="done">
-        <h2>Done</h2>
-        <p class="column-note">Newest at top · Process oldest from the bottom</p>
-        <div class="cards"></div>
-      </section>
+  <body>
+    <main>
+      <h1>Attention Control has retired</h1>
+      <p>Attention Control and Plate Spinner closed on 10 September 2026.</p>
+      <p>This board no longer accepts updates. Existing work, reviews and follow-ups remain in their original work systems.</p>
+      <p>No access token is needed here.</p>
     </main>
-
-    <aside class="drawer" id="drawer" hidden>
-      <button class="close" id="drawer-close" type="button" aria-label="Close">×</button>
-      <p class="kicker" id="d-kicker"></p>
-      <h2 id="d-name"></h2>
-      <p class="task" id="d-task"></p>
-      <p class="outcome" id="d-outcome"></p>
-      <p class="outcome" id="d-next"></p>
-      <p class="outcome" id="d-trigger"></p>
-      <label class="turn-label" for="turn-select">Turns</label>
-      <select id="turn-select"></select>
-      <article class="turn-view" id="turn-view"></article>
-      <p id="d-error" class="error" role="alert"></p>
-      <div class="actions" id="d-actions"></div>
-    </aside>
-
-    <dialog id="add-dialog">
-      <form method="dialog" id="add-form">
-        <h2>Add active work</h2>
-        <label>Source
-          <select name="source" required>
-            <option value="cursor">Cursor</option>
-            <option value="codex">Codex</option>
-            <option value="grok">Grok</option>
-            <option value="chatgpt">ChatGPT</option>
-          </select>
-        </label>
-        <label>Chat name
-          <input name="chat_name" required placeholder="Website implementation" />
-        </label>
-        <label>Task
-          <input name="task" required placeholder="What is happening" />
-        </label>
-        <label>Intended outcome
-          <input name="intended_outcome" required placeholder="What done looks like" />
-        </label>
-        <label>Locator <span class="opt">optional</span>
-          <input name="locator" placeholder="Direct URL or repo path" />
-        </label>
-        <menu>
-          <button value="cancel" type="submit">Cancel</button>
-          <button id="add-save" value="default" type="submit">Add</button>
-        </menu>
-      </form>
-    </dialog>
-
-    <script>window.ATTENTION_API_URL="https://hnftwdtweskexxezdjql.supabase.co/functions/v1/plate-spinner";</script><script src="./app.js?v=fdd3a92"></script>
   </body>
 </html>
